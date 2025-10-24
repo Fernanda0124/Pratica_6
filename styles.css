@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #6a5acd;       
+  --primary-dark: #5a4abc;
+  --secondary-color: #343a40;
+  --background-color: #f4f6fa;
+  --card-bg: #fff;
+  --border-color: #e6e8ec;
+  --text-color: #2d2d2d;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+h1 {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-secondary {
+  border-color: var(--border-color);
+  color: var(--secondary-color);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--border-color);
+  color: var(--primary-dark);
+}
+
+.container {
+  max-width: 1100px;
+}
+
+.table {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.table thead {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.table th {
+  font-weight: 500;
+}
+.table-hover tbody tr:hover {
+  background-color: rgba(106, 90, 205, 0.08);
+}
+
+.table td button {
+  transition: transform 0.1s ease;
+}
+.table td button:hover {
+  transform: scale(1.05);
+}
+
+.modal-content {
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+.modal-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.modal-title {
+  font-weight: 500;
+}
+.modal-footer {
+  background-color: #fafbfc;
+  border-top: 1px solid var(--border-color);
+}
+
+.form-control {
+  border-radius: 8px;
+  border-color: var(--border-color);
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(106, 90, 205, 0.25);
+  border-color: var(--primary-color);
+}
+
+#alerts .alert {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .table th:nth-child(1),
+  .table td:nth-child(1) {
+    display: none; 
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #btn-new, #btn-refresh {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
